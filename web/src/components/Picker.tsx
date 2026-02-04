@@ -31,9 +31,9 @@ const Picker = () => {
             setFrom(value!);
           }}
         >
-          <ComboboxInput placeholder="Select a timezone" />
+          <ComboboxInput placeholder="Select a format" className='flex-1'/>
           <ComboboxContent>
-            <ComboboxEmpty>No timezones found.</ComboboxEmpty>
+            <ComboboxEmpty>No formats found.</ComboboxEmpty>
             <ComboboxList>
               {(group, index) => (
                 <ComboboxGroup key={index} items={group.items}>
@@ -59,9 +59,9 @@ const Picker = () => {
             setTo(value!);
           }}
         >
-          <ComboboxInput placeholder="Select a timezone" />
+          <ComboboxInput placeholder="Select a format" className='flex-1'/>
           <ComboboxContent>
-            <ComboboxEmpty>No timezones found.</ComboboxEmpty>
+            <ComboboxEmpty>No formats found.</ComboboxEmpty>
             <ComboboxList>
               {(group, index) => (
                 <ComboboxGroup key={index} items={group.items}>
