@@ -1,12 +1,14 @@
 import ConvertBtn from "@/components/ConvertBtn";
 import InputBar from "@/components/InputBar";
 import Picker from "@/components/Picker";
+import Topbar from "@/components/Topbar";
 import { Spotlight } from "@/components/ui/spotlight";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
     <>
+      <Topbar />
       <div className="w-full h-screen flex flex-col md:flex-row items-stretch gap-3 p-10">
         <div
           className={cn(
