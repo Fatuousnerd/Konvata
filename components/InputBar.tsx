@@ -77,7 +77,7 @@ const InputBar = () => {
             <File size={150} />
           </ItemContent>
           <ItemFooter>
-            <ItemTitle>{file.name}</ItemTitle>
+            <ItemTitle className="font-bold text-2xl">{file.name}</ItemTitle>
             <ItemDescription className="uppercase">
               {formatSize(file.size)} | {file.type.split("/")[0]} |{" "}
               {file.type.split("/")[1]}

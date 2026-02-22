@@ -31,7 +31,7 @@ const ConvertBtn = () => {
 
   const convert = async () => {
     if (!file) return;
-    
+
     try {
       setLoading(true);
 
@@ -39,7 +39,7 @@ const ConvertBtn = () => {
       await ffmpeg.load();
       ffmpeg.writeFile(`file.${from}`, await fetchFile(file!));
       await ffmpeg.exec(["-i", `file.${from}`, `newFile.${to}`]);
-      
+
       const data = await ffmpeg.readFile(`newFile.${to}`);
       const uint8 = new Uint8Array(data as unknown as Uint8Array);
       const blob = new Blob([uint8], {
@@ -75,7 +75,7 @@ const ConvertBtn = () => {
         <Button
           onClick={convert}
           className="flex-1"
-          disabled={!from || !to || !ready || loading}
+          disabled={!from || !to || !ready || to === from || loading}
         >
           {!loading ? `Convert from .${from} to .${to}` : "Loading..."}
         </Button>

@@ -3,10 +3,10 @@ export function formatSize(raw: number) {
   let index = 0;
   let size = raw;
 
-  while (size > 1000) {
-    size = size / 1000;
+  while (size > 1024) {
+    size = size / 1024;
     index++;
   }
 
-  return `${size}${sizeClass[index]}`;
+  return `${size.toFixed(2)}${sizeClass[index]}`;
 }
