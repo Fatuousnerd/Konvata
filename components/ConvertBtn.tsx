@@ -75,7 +75,7 @@ const ConvertBtn = () => {
         <Button
           onClick={convert}
           className="flex-1"
-          disabled={!from || !to || !ready || to === from || loading}
+          disabled={!from || !to || !ready || to === from || loading || !file}
         >
           {!loading ? `Convert from .${from} to .${to}` : "Loading..."}
         </Button>

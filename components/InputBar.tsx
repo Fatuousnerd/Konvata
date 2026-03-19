@@ -36,13 +36,13 @@ const InputBar = () => {
     <>
       {!file ? (
         <Empty>
-          <EmptyHeader className="border border-dashed border-foreground max-h-60 rounded-xl p-10">
+          <EmptyHeader className="border border-dashed border-foreground h-80 md:h-60 rounded-xl p-10">
             <EmptyMedia variant="icon">
               <CloudUpload />
             </EmptyMedia>
             <EmptyTitle>Konvata | Convert Files</EmptyTitle>
             <EmptyDescription>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Upload any supported file, pick the format, and convert the file. Unlimited Conversions.
             </EmptyDescription>
             <Button variant={"outline"} size={"sm"} onClick={handleClick}>
               Upload File
